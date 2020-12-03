@@ -13,12 +13,12 @@ Pod::Spec.new do |s|
     s.license         = { :type => 'Apache', :file => 'LICENSE' }
 
     s.prepare_command = <<-CMD
-./build-libssl.sh --version="#{openssl_version}" --targets="#{openssl_targets}"
+./build-libssl.sh --version="#{openssl_version}" --targets="#{openssl_targets}" --min-macos-sdk="10.13"
 ./create-openssl-framework.sh dynamic
     CMD
 
     s.ios.deployment_target         = "12.0"
-    s.osx.deployment_target         = "10.15"
+    s.osx.deployment_target         = "10.13"
     s.vendored_frameworks           = "frameworks/openssl.xcframework"
     s.requires_arc                  = false
 end
