@@ -3,6 +3,14 @@
 bin
 src
 lib
+frameworks
 include/openssl
 *.gz
 *.framework
+*.o
+*.pbxuser
+*.xcworkspace/xcuserdata
+*.xcworkspace/xcshareddata
+*.xcodeproj/project.xcworkspace
+*.xcodeproj/xcuserdata
+Pods
